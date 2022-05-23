@@ -1,0 +1,33 @@
+@use 'sassVariables/colors.scss' as colors;
+@use 'sassVariables/fonts.scss' as fonts;
+
+.mainFooter {
+  background-color: colors.$backgroundDark1;
+  display: grid;
+  grid-template-rows: 75px 50px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: none; 
+  border-top: colors.$headerFooterBorder; 
+  box-shadow: colors.$headerShadow;
+  padding-top: 20px;
+}
+
+.footerCopyright {
+  justify-self: center;
+  font-size: fonts.$sizeNavLink;
+  align-self: flex-start;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  
+  .footerIcon {
+    width: 50px;
+    margin: 0px 50px;;
+  }
+}
+
+

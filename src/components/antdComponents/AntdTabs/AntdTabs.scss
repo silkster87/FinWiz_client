@@ -1,0 +1,96 @@
+@use 'sassVariables/colors.scss' as colors;
+
+//! overwrite ant design styles
+//tabs
+//move tabs onto the top of table
+.ant-tabs-nav {
+  margin: 0 !important;
+}
+
+.ant-tabs-tab {
+  color: colors.$textSecondary !important;
+  background-color: colors.$backgroundDark1 !important;
+  border-bottom: 1px solid white !important;
+  width: 200px !important;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+  color: colors.$textPrimary !important;
+  background-color: colors.$backgroundDark1 !important;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active {
+  background-color: colors.$backgroundDark1 !important;
+  border-bottom: 0px !important;
+}
+
+//tables
+.ant-table-container, .ant-table-container table>thead>tr:first-child th:first-child {
+  border-top-left-radius: 0px !important;
+}
+
+.ant-table-container, .ant-table-container table>thead>tr:first-child {
+  border-left: 1px solid white;
+}
+
+.ant-table-container, .ant-table-container table>thead>tr:last-child {
+  border-right: 1px solid white;
+}
+
+.ant-table-container, .ant-table-container table>tbody>tr>td {
+  cursor: pointer;
+}
+
+.ant-table-container, .ant-table-container table>thead>tr>td {
+  cursor: default;
+}
+
+.ant-table-container {
+  border-radius: 0% !important;
+  background-color: colors.$backgroundDark2;
+  color: colors.$textPrimary;
+}
+
+.ant-table-cell {
+  background-color: colors.$backgroundDark1 !important;
+  color: colors.$textPrimary !important;
+}
+
+.ant-table-cell-row-hover {
+  background-color: colors.$backgroundDark2 !important;
+}
+
+.ant-table-column-sort {
+  background-color: colors.$backgroundDark2 !important;
+}
+
+//pagination buttons 
+.ant-pagination-item {
+  border-color: colors.$textPrimary !important;
+}
+
+.ant-pagination-item a {
+  background-color: colors.$backgroundDark2 !important;
+  color: colors.$textPrimary !important;
+}
+
+.ant-pagination-item-active a {
+  color: colors.$textSecondary !important;
+}
+
+.ant-table-pagination.ant-pagination.ant-table-pagination-right  {
+  margin-bottom: 0;
+}
+
+.ant-pagination-disabled .ant-pagination-item-link {
+  background-color: colors.$backgroundDark2 !important;
+  color: colors.$textSecondary !important;
+  border-color: colors.$textSecondary !important;
+  cursor: not-allowed;
+}
+
+button.ant-pagination-item-link {
+  background-color: colors.$backgroundDark2 !important;
+  border-color: colors.$textPrimary !important;
+  color: colors.$textPrimary !important;
+}

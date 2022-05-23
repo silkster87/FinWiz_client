@@ -1,0 +1,119 @@
+@use 'sassVariables/fonts.scss' as fonts;
+@use 'sassVariables/colors.scss' as colors;
+@use 'sassVariables/spacing.scss' as spacing;
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: fonts.$primary-font, sans-serif;
+  background-color: colors.$backgroundDark2;
+}
+
+//! generic container 
+.genericContainer {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: spacing.$desktopContainerPadding;
+    
+  .genericInnerContainer {
+    animation: fadeIn 2s;
+    width: spacing.$desktopContainerWidth;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .genericContainer {
+    padding: spacing.$mobileContainerPadding;
+      
+    .genericInnerContainer {
+        width: spacing.$mobileContainerWidth;
+    }
+  }
+}
+
+//! background color classes
+.bgPrimary {
+  background-color: colors.$backgroundDark1;
+}
+
+.bgSecondary {
+  background-color: colors.$backgroundDark2;
+}
+
+.bgTertiary {
+  background-color: colors.$backgroundDark3;
+}
+
+//! text color classes
+.textHeadline {
+  color: colors.$textHeadline;
+}
+
+.textPrimary {
+  color: colors.$textPrimary;
+}
+
+.textSecondary {
+  color: colors.$textSecondary;
+}
+
+.graphAsset {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  width: 700px;
+}
+
+.dividerAsset {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+h1 {
+  color: colors.$textHeadline;
+  font-size: fonts.$sizeTitle;
+  margin-bottom: 5px;
+}
+
+p {
+  color: colors.$textSecondary;
+  font-size: fonts.$sizeSubTitle;
+  margin-bottom: 3px;
+}
+
+span {
+  color: colors.$textPrimary;
+}
+
+.borderAboveBelow {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.negative-amount {
+  color: #ff0000 !important;
+}
+
+.positive-amount {
+  color: #56ff56 !important
+}
