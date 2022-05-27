@@ -7,7 +7,7 @@ import { IUserNews } from 'interfaces/user/IUserNews';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export const userApi = createApi({
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:8000/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_BACKEND_SERVER }),
   reducerPath: 'userApi',
   tagTypes: ['User'],
   refetchOnMountOrArgChange: 300,

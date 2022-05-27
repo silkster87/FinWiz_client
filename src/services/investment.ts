@@ -1,11 +1,11 @@
 export const investmentListServices = (type: 'stock' | 'crypto' | 'commodities') => {
 
-  return fetch(`http://127.0.0.1:8000/${type}-list/`)
+  return fetch(`${process.env.REACT_APP_BACKEND_SERVER}${type}-list/`)
     .then((res) => res.json());
 };
 
 export const stockListServices = () => {
 
-  return fetch('http://127.0.0.1:8000/stock-list/')
+  return fetch(`${process.env.REACT_APP_BACKEND_SERVER}stock-list/`)
     .then((res) => res.json());
 };
