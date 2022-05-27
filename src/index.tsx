@@ -12,7 +12,7 @@ render(
   <Auth0Provider
     domain={process.env.REACT_APP_AUTH0_DOMAIN || ''}
     clientId={process.env.REACT_APP_AUTH0_CLIENT_ID || ''}
-    redirectUri='https://finwiz-beta.herokuapp.com/profile'
+    redirectUri='https://unrivaled-macaron-1dff20.netlify.app/profile'
   >
     <App />
   </Auth0Provider>,
