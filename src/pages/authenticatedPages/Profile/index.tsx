@@ -87,7 +87,7 @@ const Profile = () => {
       )}
       {/* News */}
       {profile &&
-      <UserNewsColumnData profile={profile} />
+      <UserNewsColumnData />
       }
     </>
   );

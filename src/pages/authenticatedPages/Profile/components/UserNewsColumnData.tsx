@@ -4,16 +4,15 @@ import UserNewsColumn from './UserNewsColumn';
 import newsListGrid from './newListGrid';
 // HELPERS
 import { getPortfolioNews } from 'helpers/newsHelpers';
-import { IUserProfileProps } from 'components/siteComponents/UserDetails/UserDetailsInterfaces';
 // REDUX
 import { userApi } from 'redux/store';
 
-const UserNewsColumnData = ({ profile }: IUserProfileProps) => {
+const UserNewsColumnData = () => {
 
   const { useGetUserNewsQuery } = userApi;
 
   // get the user news data
-  const newsSymbols = getPortfolioNews(profile);
+  const newsSymbols = getPortfolioNews();
   const { data: news } = useGetUserNewsQuery(newsSymbols, {
     pollingInterval: 900000,
   });

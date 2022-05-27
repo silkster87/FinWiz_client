@@ -1,6 +1,4 @@
-import { IUserProfile } from 'interfaces/user/IUserProfile';
-
-export const getPortfolioNews = (profile: IUserProfile) => {
+export const getPortfolioNews = () => {
   // if(!profile.cryptos && !profile.stocks) return 'AAPL, BTC';
   
   // let result = '';
