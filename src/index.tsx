@@ -12,7 +12,7 @@ render(
   <Auth0Provider
     domain={process.env.REACT_APP_AUTH0_DOMAIN || ''}
     clientId={process.env.REACT_APP_AUTH0_CLIENT_ID || ''}
-    redirectUri='http://localhost:3000/profile'
+    redirectUri='https://finwiz-beta.herokuapp.com/profile'
   >
     <App />
   </Auth0Provider>,
